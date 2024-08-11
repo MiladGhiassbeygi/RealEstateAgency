@@ -29,6 +29,7 @@ namespace CleanArc.Web.Api.Controllers.V1.Admin
             var commandResult = await sender.Send(model);
 
             return base.OperationResult(commandResult);
+
         }
     }
 }
