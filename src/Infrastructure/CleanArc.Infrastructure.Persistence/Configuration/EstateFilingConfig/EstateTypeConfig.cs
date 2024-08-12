@@ -9,15 +9,10 @@ using System.Threading.Tasks;
 
 namespace CleanArc.Infrastructure.Persistence.Configuration.EstateFilingConfig
 {
-    internal class EstateConfig : IEntityTypeConfiguration<Estate>
+    internal class EstateTypeConfig : IEntityTypeConfiguration<EstateType>
     {
-        public void Configure(EntityTypeBuilder<Estate> builder)
+        public void Configure(EntityTypeBuilder<EstateType> builder)
         {
-            builder.HasOne(c => c.EstateType)
-                .WithMany(c => c.Estates)
-                .HasForeignKey(c => c.EstateTypeId);
-
-
             builder.HasQueryFilter(c => !c.IsDeleted);
         }
     }

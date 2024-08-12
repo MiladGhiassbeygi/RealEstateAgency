@@ -10,5 +10,13 @@ namespace CleanArc.Domain.Entities.EstateFiling
     public class EstateType : BaseEntity<byte>
     {
         public string Title { get; set; }
+
+
+        #region Navigation Properties
+
+        public IList<Estate> Estates { get; set; }
+
+        #endregion
+
     }
 }

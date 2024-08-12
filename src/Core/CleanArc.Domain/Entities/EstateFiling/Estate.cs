@@ -17,10 +17,18 @@ namespace CleanArc.Domain.Entities.EstateFiling
       
         public DateTime InsertDate { get; set; } = DateTime.Now;
         public DateTime? VacateTime { get; set; }
-        public EstateTypeEnum EstateTypeId { get; set; } = EstateTypeEnum.Unknown;
         public EstateStatusTypeEnum EstateStatusTypeId { get; set; } = EstateStatusTypeEnum.Unknown;
         public FrontageEnum FrontageEnumId { get; set; } = FrontageEnum.Unknown;
         public ContractTypeEnum ContractTypeId { get; set; } = ContractTypeEnum.Unknown;
         public DocumentTypeEnum DocumentType { get; set; } = DocumentTypeEnum.FullDocument;
+
+
+        #region Navigation Properties
+
+        public byte EstateTypeId { get; set; }
+        public EstateType EstateType { get; set; }
+
+        #endregion
+
     }
 }
