@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CleanArc.Infrastructure.Identity.Identity.Store;
 
-public class RoleStore:RoleStore<Role,ApplicationDbContext,int,UserRole,RoleClaim>
+public class RoleStore:RoleStore<Role,ApplicationDbContext,long,UserRole,RoleClaim>
 {
     public RoleStore(ApplicationDbContext context, IdentityErrorDescriber describer = null) : base(context, describer)
     {

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArc.Infrastructure.Persistence;
 
-public class ApplicationDbContext: IdentityDbContext<User, Role, int, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
+public class ApplicationDbContext: IdentityDbContext<User, Role, long, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
 {
     public ApplicationDbContext(DbContextOptions options)
         : base(options)

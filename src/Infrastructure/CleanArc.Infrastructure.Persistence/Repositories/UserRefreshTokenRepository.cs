@@ -11,7 +11,7 @@ internal class UserRefreshTokenRepository : BaseAsyncRepository<UserRefreshToken
     {
     }
 
-    public async Task<Guid> CreateToken(int userId)
+    public async Task<Guid> CreateToken(long userId)
     {
         var token = new UserRefreshToken { IsValid = true, UserId = userId };
         await base.AddAsync(token);
@@ -33,7 +33,7 @@ internal class UserRefreshTokenRepository : BaseAsyncRepository<UserRefreshToken
         return user;
     }
 
-    public Task RemoveUserOldTokens(int userId, CancellationToken cancellationToken)
+    public Task RemoveUserOldTokens(long userId, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

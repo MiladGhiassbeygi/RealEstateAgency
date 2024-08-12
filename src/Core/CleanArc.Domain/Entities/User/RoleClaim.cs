@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CleanArc.Domain.Entities.User;
 
-public class RoleClaim:IdentityRoleClaim<int>,IEntity
+public class RoleClaim:IdentityRoleClaim<long>,IEntity
 {
     public RoleClaim()
     {

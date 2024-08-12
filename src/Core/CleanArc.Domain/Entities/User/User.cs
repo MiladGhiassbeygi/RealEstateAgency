@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace CleanArc.Domain.Entities.User;
 
-public class User:IdentityUser<int>,IEntity
+public class User:IdentityUser<long>,IEntity
 {
     public User()
     {
