@@ -4,8 +4,8 @@ namespace CleanArc.Application.Contracts.Persistence;
 
 public interface IUserRefreshTokenRepository
 {
-    Task<Guid> CreateToken(int userId);
+    Task<Guid> CreateToken(long userId);
     Task<UserRefreshToken> GetTokenWithInvalidation(Guid id);
     Task<User> GetUserByRefreshToken(Guid tokenId);
-    Task RemoveUserOldTokens(int userId, CancellationToken cancellationToken);
+    Task RemoveUserOldTokens(long userId, CancellationToken cancellationToken);
 }

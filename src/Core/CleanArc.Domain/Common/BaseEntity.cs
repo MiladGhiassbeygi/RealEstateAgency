@@ -52,7 +52,7 @@ public abstract class BaseEntity<TKey> : IEntity, ITimeModification
     public DateTime CreatedTime { get; set; }
     public DateTime? ModifiedDate { get; set; }
     public long? ModifierId { get; set; }
-    public bool? IsDeleted { get; set; }
+    public bool IsDeleted { get; set; } = false;
     public long DeletorId { get; set; }
 }
 

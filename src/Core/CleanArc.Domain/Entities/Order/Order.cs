@@ -9,7 +9,7 @@ public class Order:BaseEntity
     #region Navigation Properties
 
     public User.User User { get; set; }
-    public int UserId { get; set; }
+    public long UserId { get; set; }
 
     #endregion
 }
